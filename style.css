@@ -42,10 +42,19 @@ input[type=submit] {
     min-width: 22%;
     min-height: 6vh;
     margin-top: 20px;
-    box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.562);
+    box-shadow: 0 0 8px 3px transparent;
     /* position: relative; */
     /* right: 0; */
     float: right;
+    border-radius: 5%;
+    transition: 0.5s ease-in-out;
+}
+
+input[type=submit]:hover {
+    cursor: pointer;
+    background: linear-gradient(90deg, #1e0f4677, #ff002f8e);
+    transition: 0.5s;
+    box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.562);
 }
 
 input[type=name],
