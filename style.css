@@ -1,0 +1,234 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Righteous";
+}
+
+
+/* ********  Background *********** */
+
+section {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #2a1b75, #1e0f46);
+    padding-top: 120px;
+    /* z-index: -5; */
+}
+
+
+/* *************** Texts ************ */
+
+h1,
+p {
+    color: #fff;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    border-bottom: solid #ff002d 3px;
+    width: 20%;
+    padding: 15px 0;
+}
+
+
+/* ************ Inputs ************** */
+
+input[type=submit] {
+    color: #fff;
+    font-size: 90%;
+    background-color: #1e0f46;
+    min-width: 22%;
+    min-height: 6vh;
+    margin-top: 20px;
+    box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.562);
+    /* position: relative; */
+    /* right: 0; */
+    float: right;
+}
+
+input[type=name],
+input[type=email] {
+    min-width: 105%;
+    min-height: 6vh;
+    display: flex;
+    z-index: 1;
+}
+
+ ::placeholder {
+    padding-left: 10px;
+}
+
+textarea {
+    min-width: 105%;
+}
+
+
+/* **************************** */
+
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+    /* left is section top (texts)
+    and right is section bottom (inputs) */
+    .left,
+    .right {
+        width: 60%;
+        margin: 0 auto;
+    }
+    .right {
+        padding-top: 18%;
+    }
+    p {
+        padding-top: 20px;
+        text-align: justify;
+    }
+    input[type=submit] {
+        float: none;
+        margin: 8%;
+        background-color: #ff002d;
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (max-width: 992px) {
+    .red-bg {
+        z-index: -2;
+        width: 30%;
+        max-height: 40vh;
+        position: absolute;
+        right: 7%;
+        bottom: 0;
+        background-color: #ff002d;
+    }
+    /* left is section top (texts)
+    and right is section bottom (inputs) */
+    .left,
+    .right {
+        width: 60%;
+        /* margin: 0; */
+    }
+    p {
+        padding-top: 20px;
+        text-align: justify;
+    }
+    input[type=submit] {
+        /* min-width: 4fr; */
+        float: none;
+        margin: 8%;
+    }
+}
+
+
+/* to get rid of the red bg in small screen */
+
+@media only screen and (max-width: 600px) {
+    /* made the red bg transparent to get rid of it */
+    .red-bg {
+        background-color: transparent;
+    }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+    .red-bg {
+        z-index: 1;
+        min-width: 40%;
+        min-height: 70%;
+        position: absolute;
+        right: 5%;
+        top: 10%;
+        background-color: #ff002d;
+    }
+    /* Dividing sections into two parts */
+    .row {
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+        display: flex;
+    }
+    .left {
+        width: 35%;
+    }
+    .right {
+        width: 50%;
+        position: absolute;
+        right: 5%;
+        top: 10%;
+    }
+    /* *************** Texts ****************** */
+    h1 {
+        font-size: 3em;
+    }
+    p {
+        padding-top: 40px;
+        line-height: 2em;
+    }
+    input[type=submit] {
+        /* min-width: 4fr; */
+        float: left;
+        margin: 8%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .left,
+    .right {
+        width: 60%;
+        margin: 0 auto;
+    }
+    p {
+        margin-bottom: 20%;
+    }
+    input[type=submit] {
+        float: none;
+        margin: 8%;
+        background-color: #ff002d;
+    }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {
+    .red-bg {
+        /* z-index: 1; */
+        width: 45%;
+        min-height: 80%;
+        position: absolute;
+        right: 20px;
+        top: 5%;
+        background-color: #ff002d;
+    }
+    /* Dividing sections into two parts */
+    .row {
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+        display: flex;
+    }
+    .left {
+        width: 35%;
+    }
+    .right {
+        width: 50%;
+        position: absolute;
+        right: 5%;
+    }
+    /* *************** Texts ****************** */
+    h1 {
+        font-size: 3em;
+    }
+    p {
+        padding-top: 40px;
+        line-height: 2em;
+    }
+}
